@@ -7,7 +7,7 @@ RegisterCommand('kill', function(source, args)
 
             -- Check if the player with the given server ID exists
             if GetPlayerName(targetPlayerId) then
-                -- Trigger a client event to blow up the player
+                -- Trigger a client event to kill the player
                 TriggerClientEvent('killPlayer', targetPlayerId)
                 print(GetPlayerName(targetPlayerId) .. " has peacefully passed away!")
             else
@@ -24,10 +24,10 @@ RegisterCommand('kill', function(source, args)
 
                 -- Check if the player with the given server ID exists
                 if GetPlayerName(targetPlayerId) then
-                    -- Trigger a client event to blow up the player
+                    -- Trigger a client event to kill the player
                     TriggerClientEvent('killPlayer', targetPlayerId)
 
-                    -- Notify the admin that the player has been blown up
+                    -- Notify the admin that the player has been killed
                     SendNotification(source, GetPlayerName(targetPlayerId) .. " has peacefully passed away!")
                 else
                     -- Notify the admin if the player ID is invalid
