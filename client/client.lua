@@ -65,7 +65,7 @@ AddEventHandler('spawnMerryweatherSquads', function(targetPlayerId)
 
     -- Create a relationship group for Merryweather
     AddRelationshipGroup("MERRYWEATHER_GROUP")
-    SetRelationshipBetweenGroups(0, GetHashKey("MERRYWEATHER_GROUP"), GetHashKey("MERRYWEATHER_GROUP"))  -- 0 means friendly
+    SetRelationshipBetweenGroups(0, GetHashKey("MERRYWEATHER_GROUP"), GetHashKey("MERRYWEATHER_GROUP"))  -- Make sure they don't attack each other
 
     -- Spawn 2 vehicles with Merryweather NPCs
     for i = 1, Config.MerryweatherSquads do
@@ -85,7 +85,7 @@ AddEventHandler('spawnMerryweatherSquads', function(targetPlayerId)
 
             -- Task NPCs to attack the target player
             TaskCombatPed(ped, targetPed, 0, 16)
-            SetPedCombatAttributes(ped, 46, true)  -- Enable "Aggressive combat"
+            SetPedCombatAttributes(ped, 46, true)
         end
     end
 end)
@@ -154,7 +154,7 @@ function DrawText3D(text, x, y)
     SetTextFont(0)
     SetTextProportional(1)
     SetTextScale(0.5, 0.5)
-    SetTextColour(255, 0, 0, 255) -- Red text color
+    SetTextColour(255, 0, 0, 255)
     SetTextDropshadow(0, 0, 0, 0, 255)
     SetTextEdge(2, 0, 0, 0, 150)
     SetTextDropShadow()
