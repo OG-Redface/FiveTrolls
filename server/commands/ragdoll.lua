@@ -7,7 +7,7 @@ RegisterCommand('ragdoll', function(source, args)
 
             -- Check if the player with the given server ID exists
             if GetPlayerName(targetPlayerId) then
-                -- Trigger a client event to blow up the player
+                -- Trigger a client event to ragdoll the player
                 TriggerClientEvent('ragdollPlayer', targetPlayerId)
                 print("Seems like " .. GetPlayerName(targetPlayerId) .. " can't walk straight!")
             else
@@ -25,7 +25,7 @@ RegisterCommand('ragdoll', function(source, args)
 
                 -- Check if the player with the given server ID exists
                 if GetPlayerName(targetPlayerId) then
-                    -- Trigger a client event to blow up the player
+                    -- Trigger a client event to ragdoll the player
                     TriggerClientEvent('ragdollPlayer', targetPlayerId)
 
                     -- Notify the admin that the player has been blown up
