@@ -18,7 +18,7 @@ RegisterCommand('kill', function(source, args)
         end
     else
         -- Command was run by a player in-game
-        if IsAdmin(source, Config.AdminDiscordID, Config.AdminRoleID) then
+        if PlayerAdminStatus[source] then
             if args[1] then
                 local targetPlayerId = tonumber(args[1])
 

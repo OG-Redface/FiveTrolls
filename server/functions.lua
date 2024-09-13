@@ -12,7 +12,6 @@ function IsAdmin(source, adminUserID, adminRoleID)
             end
         end
     end
-
     return false -- Player is not allowed to use the command
 end
 

@@ -9,6 +9,7 @@ lua54 'yes'
 client_scripts
 {
     'config.lua',
+    'client/events.lua',
     'client/client.lua'
 }
 
