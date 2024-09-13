@@ -17,6 +17,7 @@ server_scripts
     'config.lua',
     'server/functions.lua',
     'server/events.lua',
+    'server/version.lua',
     'server/commands/merryweather.lua',
     'server/commands/restrictspeed.lua',
     'server/commands/blowup.lua',

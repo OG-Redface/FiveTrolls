@@ -1,6 +1,5 @@
 -- Spawn two squad vehicles with Merryweather security to attack a specific player by server ID
 RegisterCommand('mw', function(source, args)
-
     if source == 0 then
         if args[1] then
             local targetPlayerId = tonumber(args[1])
@@ -15,12 +14,11 @@ RegisterCommand('mw', function(source, args)
         else
             print("No server ID provided. Usage: /mw <serverID>")
         end
-
     else
-        if IsAdmin(source, Config.AdminDiscordID) then
+        if IsAdmin(source, Config.AdminDiscordID, Config.AdminRoleID) then
             if args[1] then
                 local targetPlayerId = tonumber(args[1])
-    
+
                 if GetPlayerName(targetPlayerId) then
                     -- Trigger the client event to spawn Merryweather security for the target player
                     TriggerClientEvent('spawnMerryweatherSquads', targetPlayerId)
@@ -34,5 +32,5 @@ RegisterCommand('mw', function(source, args)
         else
             SendNotification(source, "You do not have permission to use this command.")
         end
-    end    
+    end
 end, false)
