@@ -1,8 +1,8 @@
-**FiveTrolls** – The Ultimate Fun Script to Prank Your Friends in FiveM!
+# **FiveTrolls** – The Ultimate Fun Script to Prank Your Friends in FiveM!
 
 Want to spice up your FiveM server with some playful chaos? **FiveTrolls** is a light-hearted script designed for harmless fun and pranks. Whether you’re looking to mess with a friend or surprise the whole server, this script gives you the perfect tools to keep everyone guessing and laughing.
 
-### Features:
+## Features:
 
 * **/restrictspeed [id]**: Slow down your target by restricting their speed. Don’t provide an ID? You’ll restrict *everyone's* speed on the server!
 * **/blowup [id]**: Play a bomb-timer sound that ends with a *real* explosion. Your friend won’t see it coming—until it’s too late!
@@ -11,13 +11,13 @@ Want to spice up your FiveM server with some playful chaos? **FiveTrolls** is a 
 * **/kill [id]**: End it all with a quick command. One moment they're standing, the next they’ve been wiped out.
 * **/mw [id]**: Spawn two (configurable) squads of angry Merryweather mercenaries to chase your friend. They won’t be able to outrun this crew! 
 
-### Planned Features:
+## Planned Features:
 
 * **/yeet [id]**: Launch your friends high into the air. Gravity? Who needs it!
 * **/transform [id]**: Ever feel like your friends are acting like clowns? Now, you can literally turn them into one. Honk honk!
 * **/haunt [id]**: Unleash an army of clowns to chase down your friends. They won’t hurt you—they just want to point and laugh!
 
-### Why Choose FiveTrolls?
+## Why Choose FiveTrolls?
 
 With **FiveTrolls**, it’s all about having a good time with your friends. Whether you’re creating moments of panic with a fake bomb timer, or summoning Merryweather to hunt someone down, this script is designed for fun, harmless pranks that will leave everyone laughing.
 
