@@ -104,3 +104,5 @@ Config = {
 * **NotificationAuthor**: Set the name that will appear in the chat as the sender of admin notifications.
 * **SpeedLimiterText**: Customize the message that is sent when a player's speed is restricted. You can use emojis and `\n` for new lines.
 * **MerryweatherSquads**: Define how many Merryweather squad cars are spawned for the `/mw` command.
+
+## Join our Discord server for support! https://discord.gg/v34zw4DtAa
