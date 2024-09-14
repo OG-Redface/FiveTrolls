@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'Redface'
 description 'A pretty decent troll script to mess with your friends'
-version '1.0.5'
+version '1.0.6'
 lua54 'yes'
 
 client_scripts
