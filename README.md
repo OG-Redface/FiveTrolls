@@ -57,3 +57,50 @@ ensure FiveTrolls
 > **Important**: Make sure **Badger_Discord_API** is started **before** FiveTrolls. If **Badger_Discord_API** is not installed or not running before FiveTrolls, the commands using **Role IDs** will not function correctly.
 
 > **Note**: If you do not want to use **Role IDs**, leave the **AdminRoleID** in the config file as `"CHANGE_ME"` or empty, and only the **AdminUserID** will be used for command permissions.
+
+## Configuration
+
+### Step 4: Edit the `config.lua` File
+
+```
+Config = {
+    -- Discord User ID for the person who can execute all commands
+    -- Find your Discord User ID and replace the value below
+    AdminUserID = "518911871412076547",
+
+    -- Discord Role ID for players allowed to execute commands (requires Badger_Discord_API)
+    -- If you're using Role IDs for permissions, replace the value below
+    -- If you are not using Badger_Discord_API, leave as "CHANGE_ME" or empty
+    AdminRoleID = "CHANGE_ME",
+
+    -- Maximum speed limit for /restrictspeed (converted to meters per second)
+    MaxSpeed = 30.0,
+
+    -- Timer for the delay before the bomb explodes when using /blowup (in milliseconds)
+    Timer = 1500,
+
+    -- Name that will appear as the sender for admin notifications in chat
+    NotificationAuthor = "[MrRedDev]",
+
+    -- Message displayed when a player's speed is restricted
+    SpeedLimiterText = "MrRedDev:\nGot yo ass 🤣\nSlow ass grandma 🐌",
+
+    -- Number of Merryweather squad cars that spawn for the /mw command
+    MerryweatherSquads = 2
+}
+```
+
+### Step 5: Customize the Values
+
+* **AdminUserID**: This is your Discord User ID and allows you to execute all commands. Replace `"518911871412076547"` with your actual **Discord User ID**. To find your Discord User ID:
+  1. Enable Developer Mode in Discord.
+  2. Right-click your name and click "Copy ID".
+
+* **AdminRoleID**: If you want to allow players with a specific Discord **Role ID** to execute commands, set the **AdminRoleID** to the relevant role's ID. You will need **Badger_Discord_API** installed for this to work. Leave this field as `"CHANGE_ME"` or empty if you don't want to use **Role IDs**.
+
+* **MaxSpeed**: Define the speed limit for the `/restrictspeed` command (in meters per second). The example is set to `30.0` meters per second (approximately 67 mph).
+
+* **Timer**: This controls the delay (in milliseconds) before the bomb explodes when using `/blowup`.
+* **NotificationAuthor**: Set the name that will appear in the chat as the sender of admin notifications.
+* **SpeedLimiterText**: Customize the message that is sent when a player's speed is restricted. You can use emojis and `\n` for new lines.
+* **MerryweatherSquads**: Define how many Merryweather squad cars are spawned for the `/mw` command.
