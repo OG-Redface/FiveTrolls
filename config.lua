@@ -1,19 +1,25 @@
 Config = {
-    -- Used to determine the Discord User ID that can execute all the commands
+    -- Discord User ID for the person who can execute all commands
+    -- Find your Discord User ID and replace the value below
     AdminUserID = "518911871412076547",
-    --[[
-    Used to determine the Discord Role ID that can execute all the commands
-    You will need Badger_Discord_API to be installed and configured for this option to work properly
-    LEAVE AS DEFAULT IF YOU WOULD LIKE TO BE THE ONLY PERSON ABLE TO EXECUTE THE COMMANDS ]]
+
+    -- Discord Role ID for players allowed to execute commands (requires Badger_Discord_API)
+    -- If you're using Role IDs for permissions, replace the value below
+    -- If you are not using Badger_Discord_API, leave as "CHANGE_ME" or empty
     AdminRoleID = "CHANGE_ME",
-    -- Used to determine max speed for /restrictspeed (converted to meters per second)
+
+    -- Maximum speed limit for /restrictspeed (converted to meters per second)
     MaxSpeed = 30.0 / 2.236936,
-    -- Used to determine the starting timer for /playsound (number in milliseconds)
+
+    -- Timer for the delay before the sound plays when using /playsound (in milliseconds)
     Timer = 1500,
-    -- Used to determine the name that pops up as the sender for admin notifcations
+
+    -- Name that will appear as the sender for admin notifications in chat
     NotificationAuthor = "[MrRedDev]",
-    -- Used to determine the text that pops up when a player's speed has been restricted
-    SpeedLimiterText = "MrRedDev:\nGot yo ass 🤣\nSlow ass grandma 😭",
-    -- Used to determine how many squad cars spawn
+
+    -- Message displayed when a player's speed is restricted
+    SpeedLimiterText = "MrRedDev:\nGot yo ass 🤣\nSlow ass grandma 🐌",
+
+    -- Number of Merryweather squad cars that spawn for the /mw command
     MerryweatherSquads = 2
 }
