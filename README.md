@@ -105,4 +105,4 @@ Config = {
 * **SpeedLimiterText**: Customize the message that is sent when a player's speed is restricted. You can use emojis and `\n` for new lines.
 * **MerryweatherSquads**: Define how many Merryweather squad cars are spawned for the `/mw` command.
 
-### Join our Discord server for support! https://discord.gg/v34zw4DtAa
+### [Join our Discord server for support!](https://discord.gg/v34zw4DtAa)
