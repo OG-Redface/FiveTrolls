@@ -19,7 +19,7 @@ Citizen.CreateThread(function()
                 end
 
                 -- If the vehicle speed exceeds the limit, reduce it
-                if speed > Config.MaxSpeed then
+                if speed > Config.MaxSpeed / 2.236936 then
                     SetVehicleForwardSpeed(vehicle, speed - 1)
 
                     -- Send a message to the player if not already notified
@@ -51,10 +51,10 @@ RegisterNetEvent('spawnMerryweatherSquads')
 AddEventHandler('spawnMerryweatherSquads', function(targetPlayerId)
     local targetPed = GetPlayerPed(GetPlayerFromServerId(targetPlayerId))
     local playerCoords = GetEntityCoords(targetPed)
-    
+
     -- Model and vehicle details
-    local vehicleModel = GetHashKey("granger")  -- Merryweather vehicle model
-    local pedModel = GetHashKey("s_m_y_blackops_01")  -- Merryweather NPC model
+    local vehicleModel = GetHashKey("granger")       -- Merryweather vehicle model
+    local pedModel = GetHashKey("s_m_y_blackops_01") -- Merryweather NPC model
 
     RequestModel(vehicleModel)
     RequestModel(pedModel)
@@ -65,15 +65,16 @@ AddEventHandler('spawnMerryweatherSquads', function(targetPlayerId)
 
     -- Create a relationship group for Merryweather
     AddRelationshipGroup("MERRYWEATHER_GROUP")
-    SetRelationshipBetweenGroups(0, GetHashKey("MERRYWEATHER_GROUP"), GetHashKey("MERRYWEATHER_GROUP"))  -- Make sure they don't attack each other
+    SetRelationshipBetweenGroups(0, GetHashKey("MERRYWEATHER_GROUP"), GetHashKey("MERRYWEATHER_GROUP")) -- Make sure they don't attack each other
 
     -- Spawn 2 vehicles with Merryweather NPCs
     for i = 1, Config.MerryweatherSquads do
-        local spawnOffset = 50.0  -- Offset to avoid overlapping
-        local vehicle = CreateVehicle(vehicleModel, playerCoords.x + (i * 5 + spawnOffset), playerCoords.y + (i * 5 + spawnOffset), playerCoords.z, GetEntityHeading(targetPed), true, true)
+        local spawnOffset = 50.0 -- Offset to avoid overlapping
+        local vehicle = CreateVehicle(vehicleModel, playerCoords.x + (i * 5 + spawnOffset),
+            playerCoords.y + (i * 5 + spawnOffset), playerCoords.z, GetEntityHeading(targetPed), true, true)
 
         -- Spawn 4 Merryweather NPCs in each vehicle
-        for seat = -1, 2 do  -- Driver (-1) and passengers (0, 1, 2)
+        for seat = -1, 2 do -- Driver (-1) and passengers (0, 1, 2)
             local ped = CreatePedInsideVehicle(vehicle, 4, pedModel, seat, true, true)
 
             -- Assign them to the relationship group
@@ -112,7 +113,7 @@ AddEventHandler('startBombTimer', function(source, isFake)
                 if not isFake then
                     TriggerEvent('blowupPlayer', -1)
                 end
-                    TriggerServerEvent('MrRedDev:TimerUp', source, GetPlayerName(PlayerId()), isFake)
+                TriggerServerEvent('MrRedDev:TimerUp', source, GetPlayerName(PlayerId()), isFake)
             end
 
             Citizen.Wait(timer)

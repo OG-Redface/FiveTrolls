@@ -9,7 +9,7 @@ Config = {
     AdminRoleID = "CHANGE_ME",
 
     -- Maximum speed limit for /restrictspeed (converted to meters per second)
-    MaxSpeed = 30.0 / 2.236936,
+    MaxSpeed = 30.0,
 
     -- Timer for the delay before the sound plays when using /playsound (in milliseconds)
     Timer = 1500,
