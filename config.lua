@@ -11,7 +11,7 @@ Config = {
     -- Maximum speed limit for /restrictspeed (converted to meters per second)
     MaxSpeed = 30.0,
 
-    -- Timer for the delay before the sound plays when using /playsound (in milliseconds)
+    -- Timer for the delay before the bomb explodes when using /blowup (in milliseconds)
     Timer = 1500,
 
     -- Name that will appear as the sender for admin notifications in chat
@@ -21,5 +21,6 @@ Config = {
     SpeedLimiterText = "MrRedDev:\nGot yo ass 🤣\nSlow ass grandma 🐌",
 
     -- Number of Merryweather squad cars that spawn for the /mw command
+    -- Going over 4 is not recommended!
     MerryweatherSquads = 2
 }
