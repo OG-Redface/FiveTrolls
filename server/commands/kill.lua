@@ -18,7 +18,7 @@ RegisterCommand('kill', function(source, args)
         end
     else
         -- Command was run by a player in-game
-        if IsAdmin(source, Config.AdminDiscordID, Config.AdminRoleID) then
+        if PlayerAdminStatus[source] then
             if args[1] then
                 local targetPlayerId = tonumber(args[1])
 
@@ -36,7 +36,7 @@ RegisterCommand('kill', function(source, args)
             else
                 TriggerClientEvent('killPlayer', -1)
                 -- Notify the admin if no server ID was provided
-                SendNotification(source, "No server ID provided. Usage: /kill <serverID>")
+                SendNotification(source, "No server ID provided. Massacring everyone!")
             end
         else
             -- Notify the player that they do not have permission to use the command

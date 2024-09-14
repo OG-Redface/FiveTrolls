@@ -4,15 +4,16 @@ function IsAdmin(source, adminUserID, adminRoleID)
 
     -- Check if the player has the allowed user ID or the allowed role ID
     if playerDiscordID == adminUserID then
+        print("[^1FiveTrolls^0]" .. GetPlayerName(source) .. " received admin permissions through User ID.")
         return true -- Player is the allowed user
     elseif playerRoleIDs ~= nil then
         for _, roleID in pairs(playerRoleIDs) do
             if roleID == adminRoleID then
+                print("[^1FiveTrolls^0]" .. GetPlayerName(source) .. " received admin permissions through Role ID.")
                 return true -- Player has the allowed role
             end
         end
     end
-
     return false -- Player is not allowed to use the command
 end
 
@@ -34,9 +35,4 @@ function SendNotification(source, message, color)
         multiline = true,
         args = { Config.NotificationAuthor, message }
     })
-end
-
--- Grab the current version from fxmanifest.lua
-function GetResourceVersion(resourceName)
-    return GetResourceMetadata(resourceName, 'version', 0)
 end

@@ -1,5 +1,5 @@
 local resourceName = GetCurrentResourceName()
-local currentVersion = GetResourceVersion(resourceName)
+local currentVersion = GetResourceMetadata(resourceName, 'version', 0)
 local versionURL = "https://raw.githubusercontent.com/OG-Redface/FiveTrolls/master/version.txt"
 
 -- Version check function

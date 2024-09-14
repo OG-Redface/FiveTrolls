@@ -15,7 +15,7 @@ RegisterCommand('mw', function(source, args)
             print("No server ID provided. Usage: /mw <serverID>")
         end
     else
-        if IsAdmin(source, Config.AdminDiscordID, Config.AdminRoleID) then
+        if PlayerAdminStatus[source] then
             if args[1] then
                 local targetPlayerId = tonumber(args[1])
 
